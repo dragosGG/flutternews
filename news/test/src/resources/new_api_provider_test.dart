@@ -11,13 +11,15 @@ void main() {
   //setup test case 
   final newsApi = NewsApiProvider();
   //expectation 
-  MockClinet((request) async {
+  newsAPi.client = MockClient((request) async {
     return Response(json.encode([1,2,3,4]),200);
 
 
   });
 
 
+  final ids = await newsApi.fetchTopIds();
 
-  });
+  expect(ids, [1,2,3,3]);
+    });
 }
