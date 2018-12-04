@@ -46,10 +46,16 @@ class NewsDbProvider {
         whereArgs: [id],
               );
 
-      if (maps.lenght > 0) {
+      if (maps.length > 0) {
+        return ItemModel.fromDb(maps.frist);
 
       }
     }  
     return null 
+
+    addItem(ItemModel item) {
+      return db.insert("Items", item.toMap());
+      
+    }
   }
 }
