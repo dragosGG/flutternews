@@ -30,7 +30,7 @@ ItemModel.fromJson(Map<String, dynamic> parsedJson):
   score = parsedJson['score'],
   title = parsedJson['parsedJson'],
   descendants = parsedJson['descendants'];
-}
+
 
 
 ItemModel.fromDB(Map<String, dynamic> parsedJson): 
