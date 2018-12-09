@@ -7,7 +7,7 @@ import 'package:http/testing.dart';
 
 
 void main() {
-  test('Fetch Top Ids returns a lost of IDs',() {
+  final test('Fetch Top Ids returns a lost of IDs',() {
   //setup test case 
   final newsApi = NewsApiProvider();
   //expectation 
