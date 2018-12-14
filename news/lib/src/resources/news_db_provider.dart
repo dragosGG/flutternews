@@ -39,7 +39,7 @@ class NewsDbProvider {
       }
     );
    Future<ItemModel> fetchItem(int id) async{
-      await maps = db.query(
+       final maps = await db.query(
         "Items",
         columns: null,
         where: "id => ",
@@ -47,11 +47,12 @@ class NewsDbProvider {
               );
 
       if (maps.length > 0) {
-        return ItemModel.fromDb(maps.frist);
+        return ItemModel.fromDB(maps.first);
 
       }
+      return null; 
     }  
-    return null 
+    
 
     Future<int>addItem(ItemModel item) {
       return db.insert("Items", item.toMap());
