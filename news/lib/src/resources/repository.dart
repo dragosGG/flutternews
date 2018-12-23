@@ -13,7 +13,7 @@ Future<List<int>>fetchTopIds() {
 Future<ItemModel>fetchItem(int id) async {
   var item  = await dbProvider.fetchItem(id);
   if (item != null) {
-    return item 
+    return item; 
   }
   item  = await apiProvider.fetchItem(id);
   await dbProvider.addItem(item);

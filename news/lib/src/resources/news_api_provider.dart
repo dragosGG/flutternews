@@ -4,6 +4,9 @@ import "dart:async";
 import '../models/item_model.dart';
 
 final _root = 'https://hacker-news.firebaseio.com/v0';
+
+
+
 class NewsApiProvider{
 Client client = Client(); 
 
