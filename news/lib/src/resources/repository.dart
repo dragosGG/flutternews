@@ -23,7 +23,7 @@ Future<ItemModel>fetchItem(int id) async {
 }
 
 abstract class Source {
-Future<List<int>> fetchTopId();
+Future<List<int>> fetchTopIds();
  Future<ItemModel>fetchItem(int id);
 
 }
