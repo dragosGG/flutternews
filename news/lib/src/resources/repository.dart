@@ -29,5 +29,6 @@ Future<List<int>> fetchTopIds();
 }
 
 abstract class Cache {
+  Future<int> addItem(ItemModel item){}
 
 }
