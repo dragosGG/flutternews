@@ -21,3 +21,13 @@ Future<ItemModel>fetchItem(int id) async {
   return item; 
 }
 }
+
+abstract class Source {
+Future<List<int>> fetchTopId();
+ Future<ItemModel>fetchItem(int id);
+
+}
+
+abstract class Cache {
+
+}
