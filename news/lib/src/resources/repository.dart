@@ -8,10 +8,11 @@ List<Source> sources = <Source> [
   newsDbProvider,
   NewsApiProvider(),
 ];
+// to do integrate over sources when db provider gets FetchTopIds Implemented
 
 List<Cache> caches = <Cache>[newsDbProvider,];
 Future<List<int>>fetchTopIds() {
-  return apiProvider.fetchTopIds();
+  return sources[1].fetchTopIds();
 }
 Future<ItemModel>fetchItem(int id) async {
   ItemModel item;
