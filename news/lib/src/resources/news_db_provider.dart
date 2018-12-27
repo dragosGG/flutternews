@@ -66,3 +66,5 @@ Future<List<int>> fetchTopIds() {
     }
   
 }
+
+final newsDbProvider = NewsDbProvider();
